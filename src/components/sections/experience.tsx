@@ -48,7 +48,7 @@ export function Experience() {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
             {/* Work Experience */}
             <motion.div variants={itemVariants} className="bg-gradient-to-br from-white/10 via-cyan-200/10 to-[#2c5364]/30 rounded-2xl p-6 border border-cyan-300/20 shadow-2xl hover:shadow-cyan-400/30 hover:border-cyan-300/40 transition-all duration-300 backdrop-blur-md">
               <div className="flex items-center gap-3 mb-8">
