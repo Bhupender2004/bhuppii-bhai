@@ -47,13 +47,14 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#101c16] text-white shadow-inner shadow-cyan-900/20">
+    <section
+      id="projects"
+      className="relative z-10 py-20 min-h-[60vh] bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#101c16] text-white shadow-inner shadow-cyan-900/20"
+      style={{ minHeight: '60vh', background: 'linear-gradient(135deg, #0f2027 0%, #2c5364 60%, #101c16 100%)' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          initial="visible"
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
@@ -86,21 +87,19 @@ export function Projects() {
           </motion.div>
 
           {/* Projects Grid */}
-          <motion.div 
-            layout
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
           >
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
               {filteredProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
                   className="group"
+                  variants={itemVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  layout
                 >
                   <Card className="h-full bg-gradient-to-br from-white/10 via-cyan-200/10 to-[#2c5364]/30 border border-cyan-300/20 text-card-foreground shadow-2xl hover:shadow-cyan-400/30 hover:border-cyan-300/40 transition-all duration-300 overflow-hidden backdrop-blur-md">
                     {/* Project Image */}
@@ -249,19 +248,15 @@ export function Projects() {
               ))}
             </AnimatePresence>
           </motion.div>
+        </motion.div>
+      </div>
 
           {/* View More Button */}
           {filteredProjects.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-12"
-            >
+            <div className="text-center py-12">
               <p className="text-muted-foreground">No projects found in this category.</p>
-            </motion.div>
+            </div>
           )}
-        </motion.div>
-      </div>
     </section>
   );
 }

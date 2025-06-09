@@ -30,13 +30,17 @@ const itemVariants = {
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#101c16] text-white shadow-inner shadow-cyan-900/20">
+    <section
+      id="experience"
+      className="relative z-10 min-h-[60vh] block py-20 bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#101c16] text-white shadow-inner shadow-cyan-900/20 overflow-visible bg-[#101c16]"
+      style={{ minHeight: '60vh', background: 'linear-gradient(135deg, #0f2027 0%, #2c5364 60%, #101c16 100%)' }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
@@ -48,7 +52,7 @@ export function Experience() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 overflow-visible min-h-[40vh]">
             {/* Work Experience */}
             <motion.div variants={itemVariants} className="bg-gradient-to-br from-white/10 via-cyan-200/10 to-[#2c5364]/30 rounded-2xl p-6 border border-cyan-300/20 shadow-2xl hover:shadow-cyan-400/30 hover:border-cyan-300/40 transition-all duration-300 backdrop-blur-md">
               <div className="flex items-center gap-3 mb-8">
