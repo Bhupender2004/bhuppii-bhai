@@ -122,10 +122,10 @@ const itemVariants = {
 
 export function Resume() {
   const handleDownloadResume = () => {
-    // Create a link to download resume PDF
+    // Create a link to download the latest resume PDF
     const link = document.createElement('a');
-    link.href = '/Bhupi resume.pdf'; // Your resume PDF in the public folder
-    link.download = 'Bhupender_Yadav_Resume.pdf';
+    link.href = '/Bhupi resume.pdf'; // Ensure this matches the new file name in public/
+    link.download = 'Bhupi_Resume.pdf'; // Update the download name if desired
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
