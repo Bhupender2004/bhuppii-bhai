@@ -124,7 +124,7 @@ export function Resume() {
   const handleDownloadResume = () => {
     // Create a link to download resume PDF
     const link = document.createElement('a');
-    link.href = '/Bhuppii resume new.pdf'; // Your resume PDF in the public folder
+    link.href = '/Bhupi resume.pdf'; // Your resume PDF in the public folder
     link.download = 'Bhupender_Yadav_Resume.pdf';
     document.body.appendChild(link);
     link.click();
