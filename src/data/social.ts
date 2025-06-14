@@ -11,11 +11,11 @@ export const socialLinks: SocialLink[] = [
     url: "https://www.linkedin.com/in/bhupender-yadav-9143a2299/",
     icon: "Linkedin"
   },
-  {
-    name: "Instagram",
-    url: "https://www.instagram.com/bhuppii_ydv?igsh=MTV6OWoyc2FpbXZraw==",
-    icon: "Instagram"
-  },
+  // {
+  //   name: "Instagram",
+  //   url: "https://www.instagram.com/bhuppii_ydv?igsh=MTV6OWoyc2FpbXZraw==",
+  //   icon: "Instagram"
+  // },
   {
     name: "YouTube",
     url: "http://www.youtube.com/@official_bhuppiiydv",
